@@ -877,3 +877,8 @@ def test_argon2(pyi_builder):
         hash = ph.hash("s3kr3tp4ssw0rd")
         ph.verify(hash, "s3kr3tp4ssw0rd")
         """)
+
+
+@importorskip('eel')
+def test_eel(pyi_builder):
+    pyi_builder.test_source('import eel')
